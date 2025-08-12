@@ -1,7 +1,9 @@
 <?php
 header('Content-Type: application/json');
+require 'config.php';
 
-$apiKey = "5097dd75f1374bf8af71d445ee2a5a34";
+
+$apiKey = NEWS_API_KEY;
 $url = "https://newsapi.org/v2/top-headlines?category=technology&language=en&pageSize=3&apiKey={$apiKey}";
 
 $ch = curl_init();
